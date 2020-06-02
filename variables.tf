@@ -8,9 +8,13 @@ variable "vpc_id" {
   description = "VPC ID"
 }
 
-variable "subnet_ids" {
+variable "master_subnet_ids" {
   type = string
-  description = "subnetid info"
+  description = " master subnetid info"
+}
+variable "worker_subnet_ids" {
+  description = "provide subnet_id's for two lanuhc worker node in which subnet"
+  type        = string
 }
 
 // https://docs.aws.amazon.com/eks/latest/userguide/platform-versions.html

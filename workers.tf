@@ -137,7 +137,7 @@ resource "aws_autoscaling_group" "eks-worker-cluster" {
   min_size             = var.nodes[count.index]["min_nodes"]
   launch_configuration = aws_launch_configuration.eks-worker-cluster[count.index].id
   name                 = "${var.cluster_name}-eks-cluster-${count.index}"
-  vpc_zone_identifier  = var.subnet_ids
+  vpc_zone_identifier  = var.worker_subnet_ids
   target_group_arns    = var.alb_target_group_arns
 
   tag {

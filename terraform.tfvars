@@ -1,3 +1,4 @@
 cluster_name = "test"
-subnet_ids = "subnet-236cd62d"
-vpc_id = "vpc-10160a6a"
+master_subnet_ids = "subnet-5721cb76"
+worker_subnet_ids = "subnet-5721cb76"
+vpc_id = "vpc-439ea639"
