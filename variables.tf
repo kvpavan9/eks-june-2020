@@ -29,16 +29,16 @@ variable "nodes" {
   description = <<EOF
 List of maps, e.g:
 {
-  desired_nodes = "1"
-  max_nodes     = "1"
-  min_nodes     = "1"
-  instance_type = "m5.large"
+  desired_nodes = "2"
+  max_nodes     = "3"
+  min_nodes     = "2"
+  instance_type = "t3.medium"
 },
 {
   desired_nodes = "1"
   max_nodes     = "1"
   min_nodes     = "1"
-  instance_type = "m5.xlarge"
+  instance_type = "t3.medium"
 },
 EOF
 
