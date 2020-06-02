@@ -1,0 +1,1 @@
+node-group-names = ["node-group-1", "node-group-2"]
