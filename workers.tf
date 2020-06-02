@@ -116,7 +116,7 @@ resource "aws_launch_configuration" "eks-worker-cluster" {
   count                = var.nodes
   iam_instance_profile = aws_iam_instance_profile.eks-worker.name
   image_id             = var.node_ami_id != "" ? var.node_ami_id : data.aws_ami.eks-worker-ami.id
-  instance_type        = var.nodes[count.index]["instance_type"]
+  instance_type        = var.worker_instance_type
   name_prefix          = "eks-cluster"
   security_groups      = [aws_security_group.eks-worker.id]
   user_data_base64     = base64encode(local.eks-node-userdata)
@@ -126,7 +126,7 @@ resource "aws_launch_configuration" "eks-worker-cluster" {
   }
 
   root_block_device {
-    volume_size = lookup(var.nodes[count.index], "volume_size", 20)
+    volume_size = var.worker_ebs_volume_size
   }
 }
 
