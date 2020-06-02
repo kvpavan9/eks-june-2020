@@ -64,3 +64,12 @@ variable "enabled_cluster_log_types" {
   default = []
 }
 
+variable "worker_instance_type" {
+  description = "worker node instance type"
+  type        = string
+}
+variable "worker_ebs_volume_size" {
+  description = " worker instance EBS volume size"
+  type        = string
+}
+
