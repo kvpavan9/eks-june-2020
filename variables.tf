@@ -12,10 +12,10 @@ variable "worker_EBS_volume_size" {
 }
 variable "worker_node_instance_type" {
   description = "worker_node_instance_type"
-  type        = string 
+  type        = list(string)
 }
 
-variable "var.worker_node_desired_instances" {
+variable "worker_node_desired_instances" {
   description = "provide eks worker_node_desired_instances"
   type        = string
 }
