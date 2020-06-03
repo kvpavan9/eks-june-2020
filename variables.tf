@@ -3,7 +3,7 @@ variable "node-group-names" {
   type        = list(string)
 }
 variable "cluster-name" {
-  default = "terraform-eks-demo"
+  description = "provide eks cluser name"
   type    = string
 }
 

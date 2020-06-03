@@ -1,7 +1,6 @@
 resource "aws_eks_cluster" "demo" {
   name     = var.cluster-name
   role_arn = aws_iam_role.eks_cluster.arn
-  version  = var.kubernetes_version
 
   vpc_config {
     security_group_ids = [aws_security_group.demo-cluster.id]
