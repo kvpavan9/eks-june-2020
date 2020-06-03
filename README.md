@@ -38,7 +38,7 @@ terraform apply
 
 ## AWS EKS cluster authentication from workstation
 ```
-aws eks --region <region> update-kubeconfig --name terraform-eks-demo
+aws eks --region <region> update-kubeconfig --name <cluster name>
 ```
    * [refer link to know more about EKS cluster authentication](https://aws.amazon.com/premiumsupport/knowledge-center/eks-cluster-connection/) 
 
