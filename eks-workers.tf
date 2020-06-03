@@ -1,22 +1,3 @@
-resource "aws_iam_role" "eks_nodes" {
-  name = "eks-node-group-tuto"
-
-  assume_role_policy = <<POLICY
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": {
-        "Service": "ec2.amazonaws.com"
-      },
-      "Action": "sts:AssumeRole"
-    }
-  ]
-}
-POLICY
-}
-
 resource "aws_eks_node_group" "node" {
   cluster_name    = aws_eks_cluster.demo.name
   count           = length(var.node-group-names)
