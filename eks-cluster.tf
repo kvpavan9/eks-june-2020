@@ -1,6 +1,7 @@
 resource "aws_eks_cluster" "demo" {
   name     = var.cluster-name
-  role_arn = aws_iam_role.demo-cluster.arn
+  role_arn = aws_iam_role.eks_cluster.arn
+  version  = var.kubernetes_version
 
   vpc_config {
     security_group_ids = [aws_security_group.demo-cluster.id]
@@ -16,8 +17,8 @@ resource "aws_eks_cluster" "demo" {
   }
 
   depends_on = [
-    aws_iam_role_policy_attachment.demo-cluster-AmazonEKSClusterPolicy,
-    aws_iam_role_policy_attachment.demo-cluster-AmazonEKSServicePolicy,
+    aws_iam_role_policy_attachment.AmazonEKSClusterPolicy,
+    aws_iam_role_policy_attachment.AmazonEKSServicePolicy,
   ]
 }
 
