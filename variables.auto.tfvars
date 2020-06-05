@@ -1,0 +1,11 @@
+credentials        = "./serviceaccount.json"
+project_id         = "polar-leaf-275007"
+region             = "us-central1"
+zones              = ["us-central1-c", "us-central1-b"]
+name               = "gke-cluster"
+machine_type       = "g1-small"
+min_count          = 1
+max_count          = 3
+disk_size_gb       = 10
+service_account    = "serviceaccount-json@polar-leaf-275007.iam.gserviceaccount.com"
+initial_node_count = 3
